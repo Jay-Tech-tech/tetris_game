@@ -14,6 +14,7 @@ def on_every_interval():
 loops.every_interval(1000, on_every_interval)
 
 def on_forever():
-    if sprite.is_touching_edge() and sprite == ( and False):
+    # Prüft, ob der Punkt ganz unten angekommen ist (Y-Koordinate ist 4)
+    if sprite.get(LedSpriteProperty.Y) == 4:
         storage.put_number(StorageSlots.S1, 0)
 basic.forever(on_forever)
