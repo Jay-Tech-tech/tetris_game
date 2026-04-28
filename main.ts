@@ -23,10 +23,16 @@ basic.forever(function () {
     X = sprite.get(LedSpriteProperty.X)
     Y = sprite.get(LedSpriteProperty.Y)
     if (Y == 4) {
-    	
+        spielfeld[Y][X] = 1
+        led.plot(X, Y)
+        sprite.set(LedSpriteProperty.Y, 0)
+        sprite.set(LedSpriteProperty.X, 2)
     }
     else if (spielfeld[Y + 1][X] == 1) {
-    	
+        spielfeld[Y][X] = 1
+        led.plot(X, Y)
+        sprite.set(LedSpriteProperty.Y, 0)
+        sprite.set(LedSpriteProperty.X, 2)
     } 
     	
     
